@@ -7,7 +7,6 @@ package com.mycompany.titlebar;
 import java.awt.Dimension;
 import java.awt.Point;
 import java.awt.Toolkit;
-import java.awt.event.ComponentListener;
 import javax.swing.JFrame;
 
 public class TitleBar extends javax.swing.JPanel {

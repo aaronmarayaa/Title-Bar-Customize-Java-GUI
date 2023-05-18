@@ -17,26 +17,24 @@ public class MainFrame extends javax.swing.JFrame {
     
     public MainFrame() {
         initComponents();
-        goDisplay();
-        System.out.println(getSize());
+        displayTitleBar2.display(TITLEBAR);
         TITLEBAR.init(MainFrame.this);
     }
-    public void goDisplay(){
-        displayTitleBar2.display(TITLEBAR);
-    }
+    
     public int restoreState() {
         currentState = TITLEBAR.getCurrentState();
         return currentState;
     }
+    
     public MainFrame getMain(){
         return this;
     }
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         displayTitleBar2 = new com.mycompany.titlebar.DisplayTitleBar();
-        clock1 = new main.Clock();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(574, 351));
@@ -51,7 +49,7 @@ public class MainFrame extends javax.swing.JFrame {
         displayTitleBar2.setLayout(displayTitleBar2Layout);
         displayTitleBar2Layout.setHorizontalGroup(
             displayTitleBar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 503, Short.MAX_VALUE)
         );
         displayTitleBar2Layout.setVerticalGroup(
             displayTitleBar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -62,15 +60,13 @@ public class MainFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(clock1, javax.swing.GroupLayout.DEFAULT_SIZE, 503, Short.MAX_VALUE)
             .addComponent(displayTitleBar2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(displayTitleBar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(clock1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(300, Short.MAX_VALUE))
         );
 
         pack();
@@ -121,7 +117,6 @@ public class MainFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private main.Clock clock1;
     private com.mycompany.titlebar.DisplayTitleBar displayTitleBar2;
     // End of variables declaration//GEN-END:variables
 }
